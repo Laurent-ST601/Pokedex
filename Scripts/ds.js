@@ -1,0 +1,1 @@
+const starturl = "https://pokeapi.co/api/v2/pokemon"
