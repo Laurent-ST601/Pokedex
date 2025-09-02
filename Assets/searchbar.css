@@ -1,0 +1,21 @@
+.searchbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 20px;
+    border-style: none;
+  
+
+
+}
+
+.pokeball-searchbar {
+    background-color: transparent;
+    background-image: url("../assets/imgs/icons/pokeballrot.png");
+    width: 24px;
+    padding: 12px;
+
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}

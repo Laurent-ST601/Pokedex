@@ -1,1 +1,1 @@
-const starturl = "https://pokeapi.co/api/v2/pokemon"
+const Pokemon_API_Base_Url = "https://pokeapi.co/api/v2/pokemon"
