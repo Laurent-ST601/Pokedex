@@ -1,6 +1,6 @@
 .overlay {
     display: none;
-    /* unsichtbar, bis geöffnet */
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -22,9 +22,11 @@
 }
 
 .overlay-header {
+    position: relative;
     background: #78C850;
     padding: 20px;
     color: white;
+    
 }
 
 .overlay-body {

@@ -3,7 +3,9 @@
     justify-content: center;
     margin-top: 15px;
     padding: 20px;
-    
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 
 
 }
@@ -13,14 +15,14 @@
     background-image: url("../assets/imgs/icons/pokeballrot.png");
     width: 24px;
     padding: 12px;
-    
+
     background-size: cover;
     background-position: center;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-input{
+input {
     width: 250px;
     height: 50px;
     border-radius: 20px;
@@ -29,3 +31,17 @@ input{
 
 }
 
+.searchbutton {
+    margin-left: 5px;
+    background-color: #db2727;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 4px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+
+
+}

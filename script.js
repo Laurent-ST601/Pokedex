@@ -1,4 +1,5 @@
 let pokemonLoad = [];
+let pokemontypes = [];
 let offset = 0;
 const limit = 20;
 
@@ -19,29 +20,21 @@ async function loadPokemon() {
     try {
         const listResponse = await fetch(`${API_BASE_URL}?offset=${offset}&limit=${limit}`);
         const { results } = await listResponse.json();
-
-        // Details aller Pokémon parallel laden
         const details = await Promise.all(results.map(p => fetch(p.url).then(res => res.json())));
         pokemonLoad.push(...details);
-
-        // Typen parallel laden
-        const typesArray = await Promise.all(details.map(d => getPokemonTypes(d.name)));
-
-        // HTML generieren
-        details.forEach((d, i) => {
+        details.forEach(d => {
+            const typeBadges = d.types.map(t =>
+                `<span class="type-badge ${t.type.name}">${capitalizeFirstLetter(t.type.name)}</span>`
+            ).join('');
             document.getElementById("pokemonContainer").innerHTML += `
                 <div class="pokemon-card">
                     <h3>${capitalizeFirstLetter(d.name)}</h3>
                     <img src="${d.sprites.front_default}" alt="${d.name}">
-                    <p>Typ: ${typesArray[i].join(', ')}</p>
-                </div>
-            `;
+                    <div class="types">${typeBadges}</div>
+                </div>`;
         });
-
         offset += limit;
-    } catch (error) {
-        console.error("Fehler beim Laden:", error);
-    }
+    } catch (e) { console.error("Fehler beim Laden:", e); }
 }
 
 
@@ -52,14 +45,16 @@ async function loadmorePokemon() {
 
 }
 
-async function getPokemonTypes(pokemontyp) {
-    try {
-        const response = await fetch(`${API_BASE_URL}${pokemontyp.toLowerCase()}`);
-        if (!response.ok) throw new Error("Pokémon nicht gefunden");
-        const data = await response.json();
-        return data.types.map(t => capitalizeFirstLetter(t.type.name));
-    } catch (error) {
-        console.error(error);
-        return [];
-    }
-}
+details.forEach(d => {
+    const types = d.types.map(t => capitalizeFirstLetter(t.type.name));
+    const typeBadges = types.map(type => 
+        `<span class="type-badge ${type.toLowerCase()}">${type}</span>`
+    ).join('');
+
+    document.getElementById("pokemonContainer").innerHTML += `
+        <div class="pokemon-card">
+            <h3>${capitalizeFirstLetter(d.name)}</h3>
+            <img src="${d.sprites.front_default}" alt="${d.name}">
+            <div class="types">${typeBadges}</div>
+        </div>`;
+});
