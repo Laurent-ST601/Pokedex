@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    border-radius: 20px;
-    border-style: none;
-  
+    padding: 20px;
+    
 
 
 }
@@ -14,8 +13,19 @@
     background-image: url("../assets/imgs/icons/pokeballrot.png");
     width: 24px;
     padding: 12px;
-
-    cursor: pointer;
+    
     background-size: cover;
     background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
+input{
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+
+}
+

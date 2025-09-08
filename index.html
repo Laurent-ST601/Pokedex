@@ -10,27 +10,60 @@
     <link rel="stylesheet" href="./Assets/background.css">
     <link rel="stylesheet" href="./Assets/standart.css">
     <link rel="stylesheet" href="./Assets/searchbar.css">
+    <link rel="stylesheet" href="./Assets/overlaystyle.css">
+
     <script src="./Scripts/ds.js"></script>
+    <script src="script.js"></script>
+    <script src="./Scripts/overlay.js"></script>
+
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <img class="headerimg" src="./Assets/imgs/header/pokedex normal.png" alt="Überschrif Pokedex">
     </header>
 
     <nav>
-       <section class="searchbar">
-        <input type="text" id="searchinput" placeholder="Search for Pokemon..">
-        <i class="pokeball-searchbar"></i>
-       </section>
+        <section class="searchbar">
+            <i class="pokeball-searchbar"></i>
+            <input type="text" id="searchinput" placeholder="Search for Pokemon..">
+            <i class="pokeball-searchbar"></i>
+        </section>
     </nav>
 
-    <main>
-        
+    <main class="Container-Main">
+
+        <div id="pokemonContainer"></div>
+        <div class="loadMoreButton-Container">
+            <button class="loadMorePokemon" id="loadMoreButton" onclick="loadmorePokemon()">Mehr Pokémon laden</button>
+        </div>
+
+
+
+        <!-- Overlay -->
+        <div id="pokemonOverlay" class="overlay">
+            <div class="overlay-content">
+                <div class="overlay-header">
+                    <button id="closeOverlay" class="close-btn">✕</button>
+                    <img id="overlayImage" src="" alt="Pokemon" class="pokemon-image">
+                    <h2 id="overlayName" class="pokemon-name"></h2>
+                </div>
+                <div class="overlay-body">
+                    <div id="overlayTypes" class="pokemon-types"></div>
+                    <div id="overlayStats" class="pokemon-stats"></div>
+                    <div class="overlay-nav">
+                        <button id="prevPokemon" class="nav-btn">← Zurück</button>
+                        <button id="nextPokemon" class="nav-btn">Weiter →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
 
-    
+
     <footer>
 
     </footer>

@@ -22,3 +22,53 @@ header {
         /* nach oben schweben */
     }
 }
+
+
+.Container-Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+.pokemon-card {
+    display: inline-block;
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform .2;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    Filter: Drop-Shadow (8 x 8 x 10 x Grau);
+}
+
+.loadMoreButton-Container {
+    display: grid;
+}
+
+.loadMorePokemon {
+    color: white;
+    background-color: #db2727;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+
+}
