@@ -1,25 +1,12 @@
-#loadingSpinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    margin: 20px auto;
-}
-
-.spinner-hidden {
-    display: none !important;
-}
-
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.loadingscreen {
+    width: 24px;              /* Größe des GIFs */
+    height: 24px;
+    display: none;            /* standardmäßig versteckt */
+    margin-left: 10px;        /* Abstand zum Button */
+    vertical-align: middle;   /* mittig ausrichten */
+    
+    background-image: url('./Assets/gif/Bulbasaur'); /* Pfad zu deinem GIF */
+    background-size: contain; /* GIF skaliert proportional */
+    background-repeat: no-repeat;
+    background-position: center;
 }

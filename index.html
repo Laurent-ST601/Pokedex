@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./Assets/standart.css">
     <link rel="stylesheet" href="./Assets/searchbar.css">
     <link rel="stylesheet" href="./Assets/overlaystyle.css">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,7 @@
     <script src="script.js"></script>
     <script src="./Scripts/overlay.js"></script>
     <script src="./Scripts/searchpokemon.js"></script>
+    
 
 </head>
 
@@ -41,12 +43,13 @@
 
         <div id="pokemonContainer"></div>
         <div class="loadMoreButton-Container">
-            <button class="loadMorePokemon" id="loadMoreButton" onclick="loadmorePokemon()">Mehr Pokémon laden</button>
+            <button class="loadMorePokemon" id="loadMoreButton" onclick="loadmorePokemon()">load more Pokemon</button>
+            
         </div>
 
 
 
-        <!-- Overlay -->
+        
         <div id="pokemonOverlay" class="overlay">
             <div class="overlay-content">
                 <div class="overlay-header">
@@ -58,8 +61,8 @@
                     <div id="overlayTypes" class="pokemon-types"></div>
                     <div id="overlayStats" class="pokemon-stats"></div>
                     <div class="overlay-nav">
-                        <button id="prevPokemon" class="nav-btn">← Zurück</button>
-                        <button id="nextPokemon" class="nav-btn">Weiter →</button>
+                        <button id="prevPokemon" class="nav-btn">← Back</button>
+                        <button id="nextPokemon" class="nav-btn">Forward →</button>
                     </div>
                 </div>
             </div>
