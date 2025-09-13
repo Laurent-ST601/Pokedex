@@ -1,12 +1,12 @@
 .loadingscreen {
-    width: 24px;              /* Größe des GIFs */
+    width: 24px;             
     height: 24px;
-    display: none;            /* standardmäßig versteckt */
-    margin-left: 10px;        /* Abstand zum Button */
-    vertical-align: middle;   /* mittig ausrichten */
+    display: none;            
+    margin-left: 10px;        
+    vertical-align: middle;   
     
-    background-image: url('./Assets/gif/Bulbasaur'); /* Pfad zu deinem GIF */
-    background-size: contain; /* GIF skaliert proportional */
+    background-image: url('../Assets/gifs/Bulbasaur.gif'); 
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
 }

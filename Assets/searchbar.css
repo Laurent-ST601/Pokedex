@@ -45,3 +45,8 @@ input {
 
 
 }
+
+.pknseach-Container{
+    display: flex;
+    justify-content: center;
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./Assets/standart.css">
     <link rel="stylesheet" href="./Assets/searchbar.css">
     <link rel="stylesheet" href="./Assets/overlaystyle.css">
+    <link rel="stylesheet" href="./Assets/loadingscreen.css">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +22,7 @@
     <script src="script.js"></script>
     <script src="./Scripts/overlay.js"></script>
     <script src="./Scripts/searchpokemon.js"></script>
+    <script src="./Scripts/loadingscreen.js"></script>
     
 
 </head>
@@ -33,21 +35,19 @@
     <nav>
         <section class="searchbar">
             <i class="pokeball-searchbar"></i>
-            <input type="text" id="searchinput" placeholder="Search for Pokemon..">
-            <button class="searchbutton" id="searchbutton">Go and Catch it!</button>
+            <input type="text" id="filterpokemon" placeholder="Search for Pokemon.." oninput="filterListPkn()">
             <i class="pokeball-searchbar"></i>
         </section>
     </nav>
 
     <main class="Container-Main">
 
-        <div id="pokemonContainer"></div>
+        <div class="pkmsearchmid" id="pokemonContainer"></div>
         <div class="loadMoreButton-Container">
             <button class="loadMorePokemon" id="loadMoreButton" onclick="loadmorePokemon()">load more Pokemon</button>
-            
         </div>
 
-
+        <div class="loadingscreen" id="loading"></div>
 
         
         <div id="pokemonOverlay" class="overlay">

@@ -1,7 +1,7 @@
 let pokemonLoad = [];
 let pokemontypes = [];
 let offset = 0;
-const limit = 20;
+const limit = 24;
 
 
 
@@ -39,15 +39,15 @@ async function loadPokemon() {
 
 
 async function loadmorePokemon() {
-
-    offset = offset + 20;
+    showSpinner(); 
+    offset = offset + 20; 
     await loadPokemon();
-
+    hideSpinner(); 
 }
 
 details.forEach(d => {
     const types = d.types.map(t => capitalizeFirstLetter(t.type.name));
-    const typeBadges = types.map(type => 
+    const typeBadges = types.map(type =>
         `<span class="type-badge ${type.toLowerCase()}">${type}</span>`
     ).join('');
 
@@ -58,3 +58,4 @@ details.forEach(d => {
             <div class="types">${typeBadges}</div>
         </div>`;
 });
+
