@@ -17,6 +17,7 @@ function capitalizeFirstLetter(str) {
 }
 
 async function loadPokemon() {
+     showSpinner(); 
     try {
         const listResponse = await fetch(`${API_BASE_URL}?offset=${offset}&limit=${limit}`);
         const { results } = await listResponse.json();
@@ -35,14 +36,15 @@ async function loadPokemon() {
         });
         offset += limit;
     } catch (e) { console.error("Fehler beim Laden:", e); }
+     hideSpinner(); 
 }
 
 
 async function loadmorePokemon() {
-    showSpinner(); 
+   
     offset = offset + 20; 
     await loadPokemon();
-    hideSpinner(); 
+   
 }
 
 details.forEach(d => {

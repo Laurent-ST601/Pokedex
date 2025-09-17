@@ -1,8 +1,8 @@
 
 function showSpinner() {
-    document.getElementById("loading").style.display = "block"; 
+    document.getElementById("loading").classList.remove('d-none'); 
 }
 
 function hideSpinner() {
-    document.getElementById("loading").style.display = "none";
+    document.getElementById("loading").classList.add('d-none');
 }

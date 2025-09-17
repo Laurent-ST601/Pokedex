@@ -1,12 +1,29 @@
 .loadingscreen {
-    width: 24px;             
-    height: 24px;
-    display: none;            
-    margin-left: 10px;        
-    vertical-align: middle;   
-    
-    background-image: url('../Assets/gifs/Bulbasaur.gif'); 
-    background-size: contain; 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.imgloadingscreen {
+
+    width: 224px;
+    height: 224px;
+    position: relative;
+    margin-left: 10px;
+    vertical-align: middle;
+    background-image: url('../Assets/gifs/Bulbasaur.gif');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }

@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="shortcut icon" href="./Assets/imgs/icons/Ultra-ball.png" type="tabimage">
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="./Assets/background.css">
     <link rel="stylesheet" href="./Assets/standart.css">
     <link rel="stylesheet" href="./Assets/searchbar.css">
     <link rel="stylesheet" href="./Assets/overlaystyle.css">
     <link rel="stylesheet" href="./Assets/loadingscreen.css">
-    
+    <link rel="stylesheet" href="./Assets/mediaQuery.css">
+    <link rel="stylesheet" href="style.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 
     <script src="./Scripts/ds.js"></script>
+    <script src="./Scripts/loadingscreen.js"></script>
     <script src="script.js"></script>
     <script src="./Scripts/overlay.js"></script>
     <script src="./Scripts/searchpokemon.js"></script>
-    <script src="./Scripts/loadingscreen.js"></script>
-    
+
+
 
 </head>
 
 <body onload="init()">
     <header>
-        <img class="headerimg" src="./Assets/imgs/header/pokedex normal.png" alt="Überschrif Pokedex">
+        <img class="headerimg" src="./Assets/imgs/header/pokedex normal-min.png" alt="Überschrif Pokedex">
     </header>
 
     <nav>
@@ -47,9 +50,11 @@
             <button class="loadMorePokemon" id="loadMoreButton" onclick="loadmorePokemon()">load more Pokemon</button>
         </div>
 
-        <div class="loadingscreen" id="loading"></div>
+        <div class="loadingscreen d-none" id="loading">
+            <div class="imgloadingscreen"></div>
+        </div>
 
-        
+
         <div id="pokemonOverlay" class="overlay">
             <div class="overlay-content">
                 <div class="overlay-header">
